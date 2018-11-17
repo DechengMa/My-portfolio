@@ -1,0 +1,21 @@
+.site-header{
+	padding-bottom: 16px;
+	position: relative;
+
+	&__logo{
+		position: absolute;
+		a{
+			 text-decoration: none;
+			 color: black;
+			 font-family: 'Optima';
+		 	 letter-spacing: 2px;
+		 	 font-weight: bolder;
+
+		}
+
+	}
+
+	&__content{
+		position: relative;
+	}
+}

@@ -1,0 +1,14 @@
+.page-section{
+	padding: 80px;
+	border-bottom: 1px solid $mainGrey;
+
+	&__headline{
+		text-align: center;
+	}
+
+	&__description{
+		margin-left: auto;
+		margin-right: auto;
+		width: 880px;
+	}
+}

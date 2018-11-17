@@ -1,0 +1,21 @@
+.welcome-page{
+	background-color: $mainBlack; 
+	text-align: center;
+	height: 30rem;
+	box-sizing: border-box;
+	font-family: 'Optima', sans-serif;
+	border-top: 1px solid $mainGrey;
+	border-bottom: 1px solid $mainGrey;
+	color: #FFF;
+	
+	&__title{
+		margin-top: 80px;
+		font-weight: 400;
+	}
+
+	&__subtitle{
+		font-weight: 300;
+		margin-bottom: 200px;
+	}
+}
+

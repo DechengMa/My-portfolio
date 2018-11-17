@@ -1,0 +1,47 @@
+#progressbar {
+	display: inline-block;
+	width: 500px;
+	background-color: rgb(235,235,235);
+	border-radius: 6px;
+	  /* (height of inner div) / 2 + padding */
+	/*padding: 3px;*/
+	margin-top: 5px;
+	text-align: right;
+	font-size: 20px;
+	color: #FFF;
+}
+
+#progressbar {
+	.html{
+		background-color: $mainBlue;
+		width: 90%;
+		/* Adjust with JavaScript */
+		height: 20px;
+		border-radius: 6px;
+	}
+	
+	.css{
+		background-color: $mainBlue;
+		width: 70%;
+		/* Adjust with JavaScript */
+		height: 20px;
+		border-radius: 6px;
+	}
+
+	.javascript{
+		background-color: $mainBlue;
+		width: 55%;
+		/* Adjust with JavaScript */
+		height: 20px;
+		border-radius: 6px;
+	}
+
+	.react{
+		background-color: $mainBlue;
+		width: 5%;
+		/* Adjust with JavaScript */
+		height: 20px;
+		border-radius: 6px;
+	}
+
+}
