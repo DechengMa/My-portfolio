@@ -363,6 +363,8 @@ img{
 	box-sizing: border-box;
 }
 
+a{text-decoration:none;}
+
 /* Grid */
 
 .row {
@@ -556,6 +558,130 @@ img{
 	zoom: 1;
 }
 
+.row::after{ 
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.row--t-padding{
+		padding-top: 80px;
+	}
+
+.row--gutters {
+		margin-right: -65px;
+	}
+
+.row--gutters-large {
+		margin-right: -100px;
+	}
+
+.row--gutters-small{
+		margin-right: -45px;
+	}
+
+.row--gutters > div {
+		padding-right: 65px;
+	}
+
+.row--gutters-small > div {
+		padding-right: 45px;
+	}
+
+.row--gutters-large > div {
+		padding-right: 100px;
+	}
+
+.row__b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
+@media (min-width: 800px) {
+		
+		.row__b-margin-until-medium{
+		margin-bottom: 0;
+		}
+
+		.row__medium-4{
+		float: left;
+		width: 33.33%;
+		}
+
+		.row__medium-4--larger{
+		width: 37%;
+		}
+
+		.row__medium-6{
+			float: left;
+			width: 50%;
+		}
+
+		.row__medium-8{
+			float: left;
+			width: 66.66%
+		}
+
+		.row__medium-8--smaller{
+			width: 63%
+		}
+	}
+
+@media (min-width: 1010px) {
+		
+		.row__b-margin-until-large{
+		margin-bottom: 0;
+		}
+
+		.row__large-4{
+		float: left;
+		width: 33.33%;
+		}
+
+		.row__large-4--larger{
+		width: 37%;
+		}
+
+		.row__large-6{
+			float: left;
+			width: 50%;
+		} 
+
+		.row__large-8{
+			float: left;
+			width: 66.66%
+		}
+
+		.row__large-8--smaller{
+			width: 63%
+		}
+	}
+
+/* Begin equal height rules*/
+
+@media (min-width: 800px) {
+
+.flexbox .row--equal-height-at-medium{
+			display: flex
+	}
+	}
+
+.flexbox .row--equal-height-at-medium > div {
+			float: none;
+			display: flex;
+		}
+
+@media (min-width: 1010px) {
+
+.flexbox .row--equal-height-at-large{
+			display: flex
+	}
+	}
+
+.flexbox .row--equal-height-at-large > div {
+			float: none;
+			display: flex;
+		}
+
 .site-header{
 	padding-bottom: 16px;
 	position: relative;
@@ -563,7 +689,6 @@ img{
 
 .site-header__logo{
 		position: absolute;
-
 	}
 
 .site-header__logo a{
@@ -572,7 +697,6 @@ img{
 			 font-family: 'Optima';
 		 	 letter-spacing: 2px;
 		 	 font-weight: bolder;
-
 		}
 
 .site-header__content{
@@ -699,6 +823,24 @@ img{
 	border: 1px solid rgb(160,160,160);
 	text-decoration: none;
 	color: #FFF;
+    transition: background 0.5s ease-in-out;
+}
+
+.arrow{
+    display: inline-block;
+    transition: 0.3s ease-in-out
+}
+
+.btn:hover 
+.arrow{
+    
+    -webkit-transform: rotate(90deg);
+    
+            transform: rotate(90deg);
+}
+
+.btn:hover{
+    background-color:rgb(0,122,255);
 }
 
 .page-section{
@@ -706,15 +848,19 @@ img{
 	border-bottom: 1px solid rgb(160,160,160);
 }
 
-.page-section__headline{
-		text-align: center;
-	}
-
 .page-section__description{
 		margin-left: auto;
 		margin-right: auto;
 		width: 880px;
 	}
+
+.headline{
+    text-align: center;
+}
+
+.headline--works{
+        margin-bottom: 3.5rem;
+    }
 
 .about{
 	width: 100%;
@@ -725,7 +871,7 @@ img{
 
 .about__icon{
 		width: 200px;
-		border-radius: 100px;
+		border-radius: 50%;
 		overflow: hidden;
 		margin-right: auto;
 		margin-left: auto;
@@ -763,7 +909,7 @@ img{
 	/*padding: 3px;*/
 	margin-top: 5px;
 	text-align: right;
-	font-size: 20px;
+	font-size: 19px;
 	color: #FFF;
 }
 
@@ -793,8 +939,53 @@ img{
 
 #progressbar .react{
 		background-color: rgb(0,122,255);
-		width: 5%;
+		width: 20%;
 		/* Adjust with JavaScript */
 		height: 20px;
 		border-radius: 6px;
 	}
+
+.works-content{
+    display: block;
+    height: auto;
+    text-align: center;
+    margin-right: 30px;
+    
+    
+    
+}
+
+.works-content__header{
+        width: 100%;
+    }
+
+.works-content__header h3{
+            margin-right: 2rem;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+
+.works-content__header h3:last-child{
+          margin-right: 0;  
+        }
+
+.works-content__header h3:hover{
+            background-color: rgb(0,122,255);
+            color: white;
+        }
+
+.works-content__works{
+        float: left;
+        display: inline-block;
+        width: 33%;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        
+    }
+
+.works-content__works img{
+            border: 2px solid white;
+            border-radius: 10px;
+        }

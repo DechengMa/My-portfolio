@@ -1,0 +1,46 @@
+.works-content{
+    display: block;
+    height: auto;
+    text-align: center;
+    margin-right: 30px;
+    
+
+    &__header{
+        width: 100%;
+        
+        h3{
+            margin-right: 2rem;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+        
+        h3:last-child{
+          margin-right: 0;  
+        }
+        
+        h3:hover{
+            background-color: $mainBlue;
+            color: white;
+        }
+    }
+    
+    
+    &__works{
+        float: left;
+        display: inline-block;
+        width: 33%;
+        padding-right: 30px;
+        padding-bottom: 50px;
+        
+        img{
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+        
+    }
+    
+    
+    
+}
